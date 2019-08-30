@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct MessageData {
+    
+    enum `Type` {
+        case input
+        case output
+    }
+    
+    let text: String
+}

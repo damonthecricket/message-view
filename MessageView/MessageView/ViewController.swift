@@ -18,7 +18,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 100.0)
+        let data = Data.shared.data[indexPath.row]
+        return MessageCollectionViewCell.size(forData: data, width: view.frame.size.width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -26,11 +27,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return Data.shared.data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "input.message.cell", for: indexPath) as? InputMessageCollectionViewCell
+        let data = Data.shared.data[indexPath.row]
+        cell?.adjust(withData: data)
         return cell!
     }
 }

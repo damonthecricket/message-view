@@ -17,6 +17,7 @@
 		4EC404D223197BA2006F9621 /* InputMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC404CE23197BA1006F9621 /* InputMessageCollectionViewCell.swift */; };
 		4EC404D423197E87006F9621 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC404D323197E87006F9621 /* Data.swift */; };
 		4EC404D9231A66FD006F9621 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC404D8231A66FD006F9621 /* Message.swift */; };
+		4EC404DC231BADF7006F9621 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC404DB231BADF7006F9621 /* UITextView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4EC404CE23197BA1006F9621 /* InputMessageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputMessageCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EC404D323197E87006F9621 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		4EC404D8231A66FD006F9621 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		4EC404DB231BADF7006F9621 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				4EC404D7231A64D3006F9621 /* Views */,
 				4EC404D6231A64C8006F9621 /* Service */,
 				4EC404D5231A64C1006F9621 /* Model */,
+				4EC404DA231BADDF006F9621 /* Extensions */,
 				4EC404B3231965F6006F9621 /* Main.storyboard */,
 				4EC404B6231965F7006F9621 /* Assets.xcassets */,
 				4EC404B8231965F7006F9621 /* LaunchScreen.storyboard */,
@@ -101,6 +104,14 @@
 				4EC404CC23197BA1006F9621 /* OutputMessageCollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4EC404DA231BADDF006F9621 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EC404DB231BADF7006F9621 /* UITextView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				4EC404D9231A66FD006F9621 /* Message.swift in Sources */,
 				4EC404CF23197BA2006F9621 /* MessageCollectionViewCell.swift in Sources */,
 				4EC404B0231965F6006F9621 /* AppDelegate.swift in Sources */,
+				4EC404DC231BADF7006F9621 /* UITextView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,20 +29,19 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="input.message.cell" id="YQQ-W3-CtR" customClass="InputMessageCollectionViewCell" customModule="MessageView" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="0.0" width="388" height="65"/>
+                                        <rect key="frame" x="13" y="0.0" width="388" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="388" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJz-n0-Fxh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="65"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="64"/>
                                                     <color key="backgroundColor" red="0.1764705882" green="0.2156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-mQ-N30">
-                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="65"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Lorem ipsum dolor sit er elit lamet." translatesAutoresizingMaskIntoConstraints="NO" id="5qy-mQ-N30">
+                                                    <rect key="frame" x="0.0" y="10" width="388" height="44"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -54,19 +53,19 @@
                                             <constraint firstItem="5qy-mQ-N30" firstAttribute="leading" secondItem="YQQ-W3-CtR" secondAttribute="leading" id="EhU-kO-Pb6"/>
                                             <constraint firstItem="kJz-n0-Fxh" firstAttribute="top" secondItem="YQQ-W3-CtR" secondAttribute="top" id="Q4u-Mj-QVN"/>
                                             <constraint firstAttribute="bottom" secondItem="kJz-n0-Fxh" secondAttribute="bottom" id="Ra5-BE-TZT"/>
-                                            <constraint firstItem="5qy-mQ-N30" firstAttribute="top" secondItem="YQQ-W3-CtR" secondAttribute="top" id="cw0-rl-NhQ"/>
-                                            <constraint firstAttribute="bottom" secondItem="5qy-mQ-N30" secondAttribute="bottom" id="l0y-Tt-imj"/>
+                                            <constraint firstItem="5qy-mQ-N30" firstAttribute="top" secondItem="YQQ-W3-CtR" secondAttribute="top" constant="10" id="cw0-rl-NhQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="5qy-mQ-N30" secondAttribute="bottom" constant="10" id="l0y-Tt-imj"/>
                                             <constraint firstAttribute="trailing" secondItem="kJz-n0-Fxh" secondAttribute="trailing" id="pW3-Cu-QP3"/>
                                             <constraint firstAttribute="trailing" secondItem="5qy-mQ-N30" secondAttribute="trailing" id="qha-lF-vox"/>
                                         </constraints>
-                                        <size key="customSize" width="388" height="65"/>
+                                        <size key="customSize" width="388" height="64"/>
                                         <connections>
                                             <outlet property="backView" destination="kJz-n0-Fxh" id="xmb-ey-zTY"/>
                                             <outlet property="textView" destination="5qy-mQ-N30" id="Ovm-W6-zHg"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="output.message.cell" id="Rm9-jt-zmy" customClass="OutputMessageCollectionViewCell" customModule="MessageView" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="75" width="388" height="70"/>
+                                        <rect key="frame" x="13" y="74" width="388" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="388" height="70"/>

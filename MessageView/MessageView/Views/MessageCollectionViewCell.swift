@@ -21,7 +21,7 @@ class MessageCollectionViewCell: UICollectionViewCell {
         
         struct Text {
             static let minHeight: CGFloat = 35.0
-            static let addition: CGFloat = 15.0
+            static let addition: CGFloat = 20.0
         }
     }
     

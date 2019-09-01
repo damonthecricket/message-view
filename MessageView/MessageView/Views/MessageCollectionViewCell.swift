@@ -20,13 +20,16 @@ class MessageCollectionViewCell: UICollectionViewCell {
         }
         
         struct Text {
-            static let minHeight: CGFloat = 30.0
+            static let minHeight: CGFloat = 35.0
             static let addition: CGFloat = 15.0
         }
     }
     
     
     @IBOutlet weak var backView: UIView?
+    @IBOutlet weak var backViewLeadingConstraint: NSLayoutConstraint?
+    @IBOutlet weak var backViewTrailingConstraint: NSLayoutConstraint?
+    
     @IBOutlet weak var textView: UITextView?
 
     override func awakeFromNib() {
@@ -40,6 +43,10 @@ class MessageCollectionViewCell: UICollectionViewCell {
     
     func adjust(withData data: Message) {
         textView?.text = data.text
+        
+        var topCorrection = (bounds.size.height - textView!.contentSize.height*textView!.zoomScale)/2.0
+        topCorrection = max(0.0, topCorrection)
+        textView?.contentInset = UIEdgeInsets(top: topCorrection, left: 0.0, bottom: 0.0, right: 0.0)
     }
 
     class func size(forData data: Message, width: CGFloat) -> CGSize {

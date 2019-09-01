@@ -10,8 +10,9 @@ import UIKit
 
 class MessageTextView: UITextView {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override var contentSize: CGSize {
+        didSet {
 
+        }
     }
 }

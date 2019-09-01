@@ -39,7 +39,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="388" height="64"/>
                                                     <color key="backgroundColor" red="0.1764705882" green="0.2156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-mQ-N30">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-mQ-N30" customClass="MessageTextView" customModule="MessageView" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="0.0" width="358" height="64"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <attributedString key="attributedText">
@@ -69,6 +69,8 @@
                                         <size key="customSize" width="388" height="64"/>
                                         <connections>
                                             <outlet property="backView" destination="kJz-n0-Fxh" id="xmb-ey-zTY"/>
+                                            <outlet property="backViewLeadingConstraint" destination="EhU-kO-Pb6" id="YkA-5c-StL"/>
+                                            <outlet property="backViewTrailingConstraint" destination="qha-lF-vox" id="bDZ-5G-NO2"/>
                                             <outlet property="textView" destination="5qy-mQ-N30" id="Ovm-W6-zHg"/>
                                         </connections>
                                     </collectionViewCell>

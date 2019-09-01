@@ -13,15 +13,15 @@ class MessageCollectionViewCell: UICollectionViewCell {
     struct Constants {
         
         static let font = UIFont.systemFont(ofSize: 15.0)
-
-        struct Margin {
-            static let top: CGFloat = 10.0
-            static let bottom: CGFloat = 10.0
+        
+        struct Padding {
+            static let left: CGFloat = 15.0
+            static let right: CGFloat = 15.0
         }
         
         struct Text {
-            static let minHeight: CGFloat = 50.0
-            static let addition: CGFloat = 18.0
+            static let minHeight: CGFloat = 30.0
+            static let addition: CGFloat = 15.0
         }
     }
     
@@ -33,6 +33,9 @@ class MessageCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         backView?.layer.cornerRadius = 15.0
+        
+        textView?.isScrollEnabled = false
+        textView?.textAlignment = .natural
     }
     
     func adjust(withData data: Message) {
@@ -40,16 +43,15 @@ class MessageCollectionViewCell: UICollectionViewCell {
     }
 
     class func size(forData data: Message, width: CGFloat) -> CGSize {
-        let textHeight = textViewHeight(forData: data, width: width)
-        let height = textHeight + Constants.Margin.top + Constants.Margin.bottom + Constants.Text.addition
+        let textHeight = textViewHeight(forData: data, width: width - Constants.Padding.left - Constants.Padding.right)
+        let height = textHeight + Constants.Text.addition //+ Constants.Margin.top + Constants.Margin.bottom
         return CGSize(width: width, height: max(height, Constants.Text.minHeight))
     }
     
     class func textViewHeight(forData data: Message, width: CGFloat) -> CGFloat {
-        let paragraph = NSMutableParagraphStyle()
-        paragraph.alignment = .left
-
-        return (data.text as NSString).boundingRect(with: CGSize(width: width, height: .greatestFiniteMagnitude), options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [NSAttributedStringKey.font: Constants.font, NSAttributedStringKey.paragraphStyle: paragraph], context: nil).integral.size.height
+        return (data.text as NSString).boundingRect(with: CGSize(width: width, height: .greatestFiniteMagnitude),
+                                                    options: [.usesLineFragmentOrigin, .usesFontLeading],
+                                                    attributes: [NSAttributedStringKey.font: Constants.font], context: nil).integral.size.height
     }
 }
 

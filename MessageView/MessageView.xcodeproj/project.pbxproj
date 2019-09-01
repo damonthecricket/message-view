@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E5DFB8F231C219C0050577B /* MessageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DFB8E231C219C0050577B /* MessageTextView.swift */; };
 		4EC404B0231965F6006F9621 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC404AF231965F6006F9621 /* AppDelegate.swift */; };
 		4EC404B2231965F6006F9621 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC404B1231965F6006F9621 /* ViewController.swift */; };
 		4EC404B5231965F6006F9621 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC404B3231965F6006F9621 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E5DFB8E231C219C0050577B /* MessageTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTextView.swift; sourceTree = "<group>"; };
 		4EC404AC231965F6006F9621 /* MessageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EC404AF231965F6006F9621 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EC404B1231965F6006F9621 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,8 +101,9 @@
 		4EC404D7231A64D3006F9621 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4EC404CB23197BA1006F9621 /* MessageCollectionViewCell.swift */,
 				4EC404CE23197BA1006F9621 /* InputMessageCollectionViewCell.swift */,
+				4EC404CB23197BA1006F9621 /* MessageCollectionViewCell.swift */,
+				4E5DFB8E231C219C0050577B /* MessageTextView.swift */,
 				4EC404CC23197BA1006F9621 /* OutputMessageCollectionViewCell.swift */,
 			);
 			path = Views;
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EC404D423197E87006F9621 /* Data.swift in Sources */,
+				4E5DFB8F231C219C0050577B /* MessageTextView.swift in Sources */,
 				4EC404B2231965F6006F9621 /* ViewController.swift in Sources */,
 				4EC404D023197BA2006F9621 /* OutputMessageCollectionViewCell.swift in Sources */,
 				4EC404D223197BA2006F9621 /* InputMessageCollectionViewCell.swift in Sources */,

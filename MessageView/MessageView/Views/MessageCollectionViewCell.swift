@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - MessageCollectionViewCell
+
 class MessageCollectionViewCell: UICollectionViewCell {
     
     struct Constants {
@@ -23,8 +25,11 @@ class MessageCollectionViewCell: UICollectionViewCell {
             static let minHeight: CGFloat = 35.0
             static let addition: CGFloat = 20.0
         }
+        
+        struct Back {
+            static let padding: CGFloat = 130.0
+        }
     }
-    
     
     @IBOutlet weak var backView: UIView?
     @IBOutlet weak var backViewLeadingConstraint: NSLayoutConstraint?
@@ -32,33 +37,35 @@ class MessageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var textView: UITextView?
 
+    // MARK: - Object LifeCycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         backView?.layer.cornerRadius = 15.0
-        
-        textView?.isScrollEnabled = false
-        textView?.textAlignment = .natural
     }
+    
+    // MARK: - Adjust
     
     func adjust(withData data: Message) {
         textView?.text = data.text
-        
-        var topCorrection = (bounds.size.height - textView!.contentSize.height*textView!.zoomScale)/2.0
-        topCorrection = max(0.0, topCorrection)
-        textView?.contentInset = UIEdgeInsets(top: topCorrection, left: 0.0, bottom: 0.0, right: 0.0)
     }
-
+    
+    // MARK: - Size
+    
     class func size(forData data: Message, width: CGFloat) -> CGSize {
-        let textHeight = textViewHeight(forData: data, width: width - Constants.Padding.left - Constants.Padding.right)
-        let height = textHeight + Constants.Text.addition //+ Constants.Margin.top + Constants.Margin.bottom
+        let textHeight = textSize(forData: data, width: width - Constants.Padding.left - Constants.Padding.right - Constants.Back.padding)
+        let height = textHeight
         return CGSize(width: width, height: max(height, Constants.Text.minHeight))
     }
     
-    class func textViewHeight(forData data: Message, width: CGFloat) -> CGFloat {
-        return (data.text as NSString).boundingRect(with: CGSize(width: width, height: .greatestFiniteMagnitude),
-                                                    options: [.usesLineFragmentOrigin, .usesFontLeading],
-                                                    attributes: [NSAttributedStringKey.font: Constants.font], context: nil).integral.size.height
+    class func textSize(forData data: Message, width: CGFloat) -> CGFloat {
+        let txtView: UITextView = UITextView()
+        txtView.frame = CGRect(x: 0.0, y: 0.0, width: width, height: .greatestFiniteMagnitude)
+        txtView.text = data.text
+        txtView.textAlignment = .left
+        txtView.font = Constants.font
+        return txtView.contentSize.height
     }
 }
 

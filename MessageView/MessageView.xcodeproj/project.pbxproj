@@ -15,7 +15,7 @@
 		4EC404CF23197BA2006F9621 /* MessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC404CB23197BA1006F9621 /* MessageCollectionViewCell.swift */; };
 		4EC404D023197BA2006F9621 /* OutputMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC404CC23197BA1006F9621 /* OutputMessageCollectionViewCell.swift */; };
 		4EC404D223197BA2006F9621 /* InputMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC404CE23197BA1006F9621 /* InputMessageCollectionViewCell.swift */; };
-		4EC404D423197E87006F9621 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC404D323197E87006F9621 /* Data.swift */; };
+		4EC404D423197E87006F9621 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC404D323197E87006F9621 /* MessageData.swift */; };
 		4EC404D9231A66FD006F9621 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC404D8231A66FD006F9621 /* Message.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		4EC404CB23197BA1006F9621 /* MessageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EC404CC23197BA1006F9621 /* OutputMessageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputMessageCollectionViewCell.swift; sourceTree = "<group>"; };
 		4EC404CE23197BA1006F9621 /* InputMessageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputMessageCollectionViewCell.swift; sourceTree = "<group>"; };
-		4EC404D323197E87006F9621 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		4EC404D323197E87006F9621 /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		4EC404D8231A66FD006F9621 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +88,7 @@
 		4EC404D6231A64C8006F9621 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				4EC404D323197E87006F9621 /* Data.swift */,
+				4EC404D323197E87006F9621 /* MessageData.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -96,8 +96,8 @@
 		4EC404D7231A64D3006F9621 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4EC404CE23197BA1006F9621 /* InputMessageCollectionViewCell.swift */,
 				4EC404CB23197BA1006F9621 /* MessageCollectionViewCell.swift */,
+				4EC404CE23197BA1006F9621 /* InputMessageCollectionViewCell.swift */,
 				4EC404CC23197BA1006F9621 /* OutputMessageCollectionViewCell.swift */,
 			);
 			path = Views;
@@ -174,7 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EC404D423197E87006F9621 /* Data.swift in Sources */,
+				4EC404D423197E87006F9621 /* MessageData.swift in Sources */,
 				4EC404B2231965F6006F9621 /* ViewController.swift in Sources */,
 				4EC404D023197BA2006F9621 /* OutputMessageCollectionViewCell.swift in Sources */,
 				4EC404D223197BA2006F9621 /* InputMessageCollectionViewCell.swift in Sources */,

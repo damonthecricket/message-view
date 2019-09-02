@@ -10,9 +10,16 @@ import Foundation
 
 class Message {
     
-    let text: String
+    enum `Type` {
+        case incoming
+        case outgoing
+    }
     
-    init(text: String) {
+    let text: String
+    let type: Type
+    
+    init(text: String, type: Type) {
         self.text = text
+        self.type = type
     }
 }

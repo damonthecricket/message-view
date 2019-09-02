@@ -12,11 +12,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var collectionView: UICollectionView?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let data = Data.shared.data[indexPath.row]
         return MessageCollectionViewCell.size(forData: data, width: view.frame.size.width)
@@ -31,10 +26,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "input.message.cell", for: indexPath) as? InputMessageCollectionViewCell
         let data = Data.shared.data[indexPath.row]
-        cell?.adjust(withData: data)
-        return cell!
+        
+        var cell: MessageCollectionViewCell
+        
+        switch data.type {
+        case .incoming:
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "input.message.cell", for: indexPath) as! InputMessageCollectionViewCell
+        case .outgoing:
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "output.message.cell", for: indexPath) as! OutputMessageCollectionViewCell
+        }
+        
+        cell.adjust(withData: data)
+        
+        return cell
     }
 }
 

@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="input.message.cell" id="YQQ-W3-CtR" customClass="InputMessageCollectionViewCell" customModule="MessageView" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="output.message.cell" id="YQQ-W3-CtR" userLabel="output.message.cell" customClass="OutputMessageCollectionViewCell" customModule="MessageView" customModuleProvider="target">
                                         <rect key="frame" x="13" y="0.0" width="388" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -36,52 +36,75 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJz-n0-Fxh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="388" height="64"/>
+                                                    <rect key="frame" x="130" y="0.0" width="258" height="64"/>
                                                     <color key="backgroundColor" red="0.1764705882" green="0.2156862745" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-mQ-N30" customClass="MessageTextView" customModule="MessageView" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="0.0" width="358" height="64"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qy-mQ-N30" customClass="MessageTextView" customModule="MessageView" customModuleProvider="target">
+                                                    <rect key="frame" x="145" y="0.0" width="228" height="64"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment>
-                                                            <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                                            <attributes>
-                                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" maximumLineHeight="16" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="kJz-n0-Fxh" firstAttribute="leading" secondItem="YQQ-W3-CtR" secondAttribute="leading" id="1FV-r5-MNy"/>
-                                            <constraint firstItem="5qy-mQ-N30" firstAttribute="leading" secondItem="YQQ-W3-CtR" secondAttribute="leading" constant="15" id="EhU-kO-Pb6"/>
+                                            <constraint firstItem="kJz-n0-Fxh" firstAttribute="leading" secondItem="YQQ-W3-CtR" secondAttribute="leading" constant="130" id="1FV-r5-MNy"/>
+                                            <constraint firstItem="5qy-mQ-N30" firstAttribute="trailing" secondItem="kJz-n0-Fxh" secondAttribute="trailing" constant="-15" id="4gb-ns-h96"/>
                                             <constraint firstItem="kJz-n0-Fxh" firstAttribute="top" secondItem="YQQ-W3-CtR" secondAttribute="top" id="Q4u-Mj-QVN"/>
                                             <constraint firstAttribute="bottom" secondItem="kJz-n0-Fxh" secondAttribute="bottom" id="Ra5-BE-TZT"/>
                                             <constraint firstItem="5qy-mQ-N30" firstAttribute="top" secondItem="YQQ-W3-CtR" secondAttribute="top" id="cw0-rl-NhQ"/>
+                                            <constraint firstItem="5qy-mQ-N30" firstAttribute="leading" secondItem="kJz-n0-Fxh" secondAttribute="leading" constant="15" id="iz1-EL-ZsA"/>
                                             <constraint firstAttribute="bottom" secondItem="5qy-mQ-N30" secondAttribute="bottom" id="l0y-Tt-imj"/>
                                             <constraint firstAttribute="trailing" secondItem="kJz-n0-Fxh" secondAttribute="trailing" id="pW3-Cu-QP3"/>
-                                            <constraint firstAttribute="trailing" secondItem="5qy-mQ-N30" secondAttribute="trailing" constant="15" id="qha-lF-vox"/>
                                         </constraints>
                                         <size key="customSize" width="388" height="64"/>
                                         <connections>
-                                            <outlet property="backView" destination="kJz-n0-Fxh" id="xmb-ey-zTY"/>
-                                            <outlet property="backViewLeadingConstraint" destination="EhU-kO-Pb6" id="YkA-5c-StL"/>
-                                            <outlet property="backViewTrailingConstraint" destination="qha-lF-vox" id="bDZ-5G-NO2"/>
+                                            <outlet property="backView" destination="kJz-n0-Fxh" id="0aX-bl-aaX"/>
+                                            <outlet property="backViewLeadingConstraint" destination="iz1-EL-ZsA" id="MGM-Rq-xSj"/>
+                                            <outlet property="backViewTrailingConstraint" destination="4gb-ns-h96" id="3bB-T3-VWD"/>
                                             <outlet property="textView" destination="5qy-mQ-N30" id="Ovm-W6-zHg"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="output.message.cell" id="Rm9-jt-zmy" customClass="OutputMessageCollectionViewCell" customModule="MessageView" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="74" width="388" height="70"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="input.message.cell" id="M1N-Hl-7ck" customClass="InputMessageCollectionViewCell" customModule="MessageView" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="74" width="388" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="388" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipT-wS-0fV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="258" height="64"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzG-vu-Rmz" customClass="MessageTextView" customModule="MessageView" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="0.0" width="228" height="64"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
                                         </view>
-                                        <size key="customSize" width="388" height="70"/>
+                                        <constraints>
+                                            <constraint firstItem="ipT-wS-0fV" firstAttribute="leading" secondItem="M1N-Hl-7ck" secondAttribute="leading" id="Elu-1y-RLC"/>
+                                            <constraint firstAttribute="trailing" secondItem="ipT-wS-0fV" secondAttribute="trailing" constant="130" id="Ifo-ro-iQN"/>
+                                            <constraint firstItem="kzG-vu-Rmz" firstAttribute="leading" secondItem="ipT-wS-0fV" secondAttribute="leading" constant="15" id="MiD-Hq-dGl"/>
+                                            <constraint firstAttribute="bottom" secondItem="ipT-wS-0fV" secondAttribute="bottom" id="QWI-0N-gIC"/>
+                                            <constraint firstAttribute="bottom" secondItem="kzG-vu-Rmz" secondAttribute="bottom" id="SAA-cm-Fnd"/>
+                                            <constraint firstItem="kzG-vu-Rmz" firstAttribute="top" secondItem="M1N-Hl-7ck" secondAttribute="top" id="btJ-e7-0O5"/>
+                                            <constraint firstItem="ipT-wS-0fV" firstAttribute="top" secondItem="M1N-Hl-7ck" secondAttribute="top" id="g1d-oE-1ia"/>
+                                            <constraint firstItem="kzG-vu-Rmz" firstAttribute="trailing" secondItem="ipT-wS-0fV" secondAttribute="trailing" constant="-15" id="uIo-lj-9Nn"/>
+                                        </constraints>
+                                        <size key="customSize" width="388" height="64"/>
+                                        <connections>
+                                            <outlet property="backView" destination="ipT-wS-0fV" id="tAM-f4-bGG"/>
+                                            <outlet property="backViewLeadingConstraint" destination="MiD-Hq-dGl" id="mZY-97-cK4"/>
+                                            <outlet property="backViewTrailingConstraint" destination="uIo-lj-9Nn" id="D11-jB-2OE"/>
+                                            <outlet property="textView" destination="kzG-vu-Rmz" id="0xE-Ab-Ecw"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - OutputMessageCollectionViewCell
+
 class OutputMessageCollectionViewCell: MessageCollectionViewCell {
-    
+
 }
